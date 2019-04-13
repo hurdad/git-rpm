@@ -20,6 +20,11 @@ mkdir: clean
 
 download: mkdir
 	curl -L -o rpmbuild/SOURCES/$(full_name).tar.gz $(download_url); 
+	cp git-gui.desktop rpmbuild/SOURCES
+	cp gitweb-httpd.conf rpmbuild/SOURCES
+	cp gitweb.conf.in rpmbuild/SOURCES
+	cp git@.service.in rpmbuild/SOURCES
+	cp git.socket rpmbuild/SOURCES
 
 rpm: download
 	rpmbuild $(RPM_OPTS) \

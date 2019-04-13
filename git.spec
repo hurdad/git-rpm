@@ -87,8 +87,8 @@
 #global rcrev   .rc0
 
 Name:           git
-Version:        2.21.0
-Release:        1%{?rcrev}%{?dist}
+Version:        %{VERSION}
+Release:        %{RELEASE}%{?dist}
 Summary:        Fast Version Control System
 License:        GPLv2
 URL:            https://git-scm.com/
@@ -98,11 +98,11 @@ Source:         %{name}-%{version}.tar.gz
 
 # Local sources begin at 10 to allow for additional future upstream sources
 #Source11:       git.xinetd.in
-#Source12:       git-gui.desktop
-#Source13:       gitweb-httpd.conf
-#Source14:       gitweb.conf.in
-#Source15:       git@.service.in
-#Source16:       git.socket
+Source12:       git-gui.desktop
+Source13:       gitweb-httpd.conf
+Source14:       gitweb.conf.in
+Source15:       git@.service.in
+Source16:       git.socket
 
 # Script to print test failure output (used in %%check)
 #Source99:       print-failed-test-output
